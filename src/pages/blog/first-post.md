@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Writing blogs again"
 description: "Writing blogs again"
-pubDate: "Jan 07 2023"
+pubDate: "Jan 13 2023"
 heroImage: "/planet.png"
 ---
 
