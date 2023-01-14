@@ -3,7 +3,6 @@ layout: "../../layouts/BlogPost.astro"
 title: "What makes Paul Graham's blog so good?"
 description: "What makes Paul Graham's blog so good?"
 pubDate: "Jan 08 2023"
-heroImage: "/planet.png"
 ---
 
 It's hard to find another blog that have as many good ideas like Paul Graham's.
