@@ -2,8 +2,8 @@
 layout: "../../layouts/BlogPost.astro"
 title: "New blog"
 description: "Writing blogs again"
-pubDate: "Jul 08 2022"
-heroImage: "/placeholder-hero.jpg"
+pubDate: "Jan 07 2023"
+heroImage: "/astro.png"
 ---
 
 I have decided to start writing blogs again.
