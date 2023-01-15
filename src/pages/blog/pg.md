@@ -1,11 +1,11 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "What makes Paul Graham's blog so good?"
+title: "What makes Paul Graham's essays so good?"
 description: "What makes Paul Graham's blog so good?"
 pubDate: "Jan 14 2023"
 ---
 
-It's hard to find another blog that have as many good ideas like Paul Graham's.
+It's hard to find another blog that have as many good ideas like [Paul Graham's](http://www.paulgraham.com/articles.html).
 
 He has a lot of good ideas to write because of his experience working closely with hundreds of startups when he was running [YCombinator](https://www.ycombinator.com/).
 
