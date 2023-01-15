@@ -7,7 +7,7 @@ pubDate: "Jan 14 2023"
 
 It's hard to find another blog that have as many good ideas like Paul Graham's.
 
-Paul Graham writes mostly about startups and has a wealth of good ideas due to his involvement with Y Combinator.
+He has a lot of good ideas to write because of his experience working closely with hundreds of startups when he was running [YCombinator](https://www.ycombinator.com/).
 
 But I don't think this is what makes his blog great.
 
