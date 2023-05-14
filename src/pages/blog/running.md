@@ -11,7 +11,7 @@ When I started running I could only run for a few minutes.
 
 Then I had to walk for sometime.
 
-These sessions were for 2 or 3 Kilo meteres. 
+These sessions were for 2 or 3 Kilo metres. 
 
 I would then run again.
 
@@ -35,11 +35,11 @@ At that time another friend of mine ran the London marathon.
 
 He said to if you can do 3K then doing more is not that different.
 
-So one day I tried 5k by running to Limehouse from my house and back
+So one day I tried 5k by running to LimeHouse from my house and back
 
 I did the 5K but I had to take a small break in between.
 
-Another day I tried again by running to the Southark bridge and back.
+Another day I tried again by running to the Southwark bridge and back.
 
 I was able to do this time without taking any breaks. But I did had to slow down while climbing the stairs up the bridges and while passing tourists.
 
@@ -53,6 +53,6 @@ The feeling of running 10K was quite nice. There was this magical kind of feelin
 
 I don't think I ever experienced that while running 5K.
 
-Usually when I finish running those distances it's mostly the satisfication of doing the work and finishing the struggle.
+Usually when I finish running those distances it's mostly the satisfaction of doing the work and finishing the struggle.
 
 But after finishing the 10K run, the feeling was of getting into a flow state.

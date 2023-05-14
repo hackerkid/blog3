@@ -21,19 +21,19 @@ As someone who have been doing programming as a regular profession for over 5 ye
 
 I probably had the habit even before programming but I think programming really accelerated the progress.
 
-So I am now very mindful of not bringing this habbit into day to day life.
+So I am now very mindful of not bringing this habit into day to day life.
 
-I want to do things more in the flow and not over analysing thing.
+I want to do things more in the flow and not over analyzing thing.
 
 I was running while listening to this podcast.
 
-I started running onlu recently. And till that day the highest I ever ran was 5K.
+I started running only recently. And till that day the highest I ever ran was 5K.
 
 While running I decided to stop thinking about how much I can run and decided to just go with the flow.
 
 I ended up running 10k.
 
-It was a surreal momemnt.
+It was a surreal moment.
 
 Just going with the flow take you to places that you though was never possible.
 
