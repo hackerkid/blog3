@@ -25,8 +25,24 @@ In phone I uninstalled these apps. And I disabled chrome and Samsung Internet so
 
 7. I am allowed to use websites that help me get work done like GitHub, ChatGPT etc.
 
-8. I am allowed to use apps like Whatsapp that allows me stay in touch with friends and family.
+8. I am allowed to use apps like Whatsapp that allows me stay in touch with friends and family. I am allowed to check Instagram messages in web app. But only at the end of the day. 
 
 9. I am allowed to spend 15 mins on Hacker News per day after I finish working on any side project. But the catch is I am only allowed to use the Lynx terminal browser for accessing it so that I don't mindlessly scroll on it.
 
+Following containing new rules I added after starting this experiment. 
+
+10. 
+
 I plan re evaluate what I should bring back to my life after finishing the 30 days.
+
+
+## Log
+
+### Day 1
+
+* As expected Slack turned out to be the main source of distraction. Need to be more mindful.
+* Didn't open Twitter nor Hacker news.
+* While going for run I tried to find a loophole and listened a meditation session for a while in Walking up app. But it didn't last long since I didn't had Internet. The run was more intense and fulfilling. 
+* Strava turned out to be another source of distraction. New rule is I will check Strava only after going for a run.
+* I found another loophole by opening chat.zulip.org. New rule is I can only check chat.zulip.org only after working on side project.
+* I should probably use the dopamine from these apps as a reward mechanisam after deepwork sessions. Need to think more. 
