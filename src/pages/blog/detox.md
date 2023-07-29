@@ -47,3 +47,16 @@ The following are new rules I added after starting this experiment:
 * Strava turned out to be another source of distraction. The new rule is that I will check Strava only after going for a run.
 * I found another loophole by opening chat.zulip.org. The new rule is that I can only check chat.zulip.org at the end of the day.
 * I should probably use the dopamine from these apps as a reward mechanism after deep work sessions. I need to give this more thought.
+
+### Day 2
+* Saying that I should be more mindful about Slack wasn't very actionable. I should stop using the desktop app and switch to the web version. I'll only check Slack after finishing an intensive work session, limiting my usage to a maximum of 5 minutes.
+
+### Day 3
+* It's Saturday! I resisted the urge to listen to a new podcast episode while running.
+* I devoted most of the day to reading "Measure What Matters," completing nearly 30%. It's been a while since I made such significant progress in one day.
+* I accessed Strava a few times. I need to add Strava to wellbeing mode and enable wellbeing mode continually, ensuring it restarts automatically if deactivated, for instance, when tracking a run.
+
+### Day 4 and 5
+* Strava and Slack. I forgot to add Strava to wellbeing mode. Today I added Strava to wellbeing mode and made attention mode automatically start when Wifi is connected.
+* Need to uninstall Slack.
+* I listened to a meditation focused podcast while going for run. I think I have to make an exemption for listening to the meditation podcast since it actually improves the quality of life. For example I did the second fastest 10k while listening to it today. The first time I did a 10k was also while listening to that podcast.
