@@ -60,3 +60,15 @@ The following are new rules I added after starting this experiment:
 * Strava and Slack. I forgot to add Strava to wellbeing mode. Today I added Strava to wellbeing mode and made attention mode automatically start when Wifi is connected.
 * Need to uninstall Slack.
 * I listened to a meditation focused podcast while going for run. I think I have to make an exemption for listening to the meditation podcast since it actually improves the quality of life. For example I did the second fastest 10k while listening to it today. The first time I did a 10k was also while listening to that podcast.
+
+
+### Day 30
+* I completed 30 days.
+* In the past 30 days, I kept the usage of Hacker News, Twitter, Instagram, YouTube etc to bare minimum.
+    * I installed Instagram for 2 days while I was on a trip to Stockholm to post stories.
+    * I need to evaluate more on whether I should encourage this behavior.
+* I think my sense of well being had significantly increased by not constantly checking Instagram and Hacker News. I plan to stick with this. This means
+    * Instagram would remain uninstalled in phone and blocked in browsers. I am allowed to check Instagram once every few days for messages.
+    * Hacker news would remain blocked. Again allowed to check it once every few days by going through the top posts of the week in Algolia.
+* My ban of podcast during run only survived a few days. Podcasts makes my runs more enjoyable so I am going to continue listening to them for a while.
+* I started to spend more time on side projects. I open sourced diff.blog which was something I have been procrastinating for months now.
