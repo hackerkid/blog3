@@ -12,3 +12,6 @@ The walk was mostly by the sea. It was a fairly easy walk.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="11549162890" data-style="standard" data-from-embed="false"></div><script src="https://strava-embeds.com/embed.js"></script>
 
+After the walk I had some fish and chips.
+
+Then I got the train back to Stratford from Ramsgate.
