@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Saving myself from emails"
+title: "[WIP] Saving myself from emails"
 pubDate: "June 29 2024"
 ---
 
