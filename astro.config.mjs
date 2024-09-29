@@ -7,4 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://vishnuks.com',
 	integrations: [mdx(), sitemap()],
+	server: {
+		port: 4000
+	  }
 });
