@@ -9,11 +9,43 @@ body {
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
+	background: linear-gradient(135deg, #2d5016 0%, #365314 25%, #166534 50%, #134e4a 75%, #155e63 100%);
+	background-size: 400% 400%;
+	background-attachment: fixed;
+	animation: spiritualGradient 15s ease infinite;
+	min-height: 100vh;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: #2c3e50;
+	position: relative;
+}
+
+/* Spiritual gradient animation */
+@keyframes spiritualGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Add a subtle overlay for better text readability */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(1px);
+	z-index: -1;
+	pointer-events: none;
 }
 h1,
 h2,
@@ -23,10 +55,17 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
+	color: #1a202c;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 a {
-	color: #3273dc;
+	color: #d97706;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	color: #b45309;
 }
 nav a {
 	margin-right: 10px;

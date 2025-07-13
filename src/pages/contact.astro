@@ -1,0 +1,88 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Contact - ${SITE_TITLE}`} description="Get in touch with Vishnu KS" />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h2>Contact</h2>
+			<p>Feel free to reach out to me through any of the following channels:</p>
+			
+			<div class="contact-links">
+				<a href="https://twitter.com/hackerkidx" target="_blank" class="contact-link">
+					<strong>Twitter</strong>
+					<span>@hackerkidx</span>
+				</a>
+				
+				<a href="https://github.com/hackerkid" target="_blank" class="contact-link">
+					<strong>GitHub</strong>
+					<span>@hackerkid</span>
+				</a>
+				
+				<a href="mailto:yo@vishnuks.com" target="_blank" class="contact-link">
+					<strong>Email</strong>
+					<span>yo@vishnuks.com</span>
+				</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.contact-links {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+	
+	.contact-link {
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem;
+		border: 1px solid rgba(217, 119, 6, 0.3);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(5px);
+		transition: all 0.3s ease;
+	}
+	
+	.contact-link:hover {
+		border-color: #d97706;
+		background: rgba(217, 119, 6, 0.1);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
+	}
+	
+	.contact-link strong {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: #d97706;
+	}
+	
+	.contact-link span {
+		color: #4a5568;
+		font-size: 0.9rem;
+	}
+	
+	@media (min-width: 640px) {
+		.contact-links {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+		.contact-link {
+			flex: 1;
+			max-width: 300px;
+		}
+	}
+</style>

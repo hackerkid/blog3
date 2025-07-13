@@ -4,21 +4,88 @@ import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h1>
-		{SITE_TITLE}
-	</h1>
+	<div class="hero-section">
+		<img src="/lake.jpg" alt="Spiritual landscape with serene lake and mountains" class="hero-image" />
+		<div class="hero-overlay">
+			<h1 class="hero-title">
+				{SITE_TITLE}
+			</h1>
+		</div>
+	</div>
 	<nav>
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="https://twitter.com/hackerkidx" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/hackerkid" target="_blank">GitHub</HeaderLink>
-		<HeaderLink href="mailto:yo@vishnuks.com" target="_blank">Email</HeaderLink>
+		<HeaderLink href="/contact">Contact</HeaderLink>
 	</nav>
 </header>
 <style>
 	header {
 		margin: 0em 0 2em;
+		position: relative;
+		z-index: 1;
 	}
+	
+	.hero-section {
+		position: relative;
+		width: 100vw;
+		height: 400px;
+		margin-left: calc(-50vw + 50%);
+		margin-bottom: 2em;
+		margin-top: -20px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+		z-index: 2;
+	}
+	
+	.hero-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(0.7) contrast(1.1) saturate(1.2);
+		transition: transform 0.3s ease;
+	}
+	
+	.hero-image:hover {
+		transform: scale(1.05);
+	}
+	
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.1) 0%,
+			rgba(0, 0, 0, 0.3) 50%,
+			rgba(0, 0, 0, 0.6) 100%
+		);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.hero-title {
+		color: white;
+		font-size: 3rem;
+		font-weight: bold;
+		text-align: center;
+		text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+		letter-spacing: 2px;
+		margin: 0;
+		padding: 20px;
+		backdrop-filter: blur(5px);
+		border-radius: 15px;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	nav {
+		text-align: center;
+		padding: 1rem 0;
+	}
+	
 	h2 {
 		margin: 0.5em 0;
 	}
