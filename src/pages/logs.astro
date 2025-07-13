@@ -1,0 +1,60 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+
+// Read logs from markdown file
+const logsResponse = await fetch(new URL('../data/logs.md', import.meta.url));
+const logsText = await logsResponse.text();
+const logLines = logsText.split('\n').filter(line => line.startsWith('- ')).map(line => line.substring(2));
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Logs - ${SITE_TITLE}`} description="Complete log of progress and momentum" />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h2 class="title is-4">
+				📅 Complete Log
+			</h2>
+			<p class="description">A complete record of progress and momentum.</p>
+			<ul class="log-list">
+				{logLines.map(log => <li>{log}</li>)}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.description {
+		color: #6b7280;
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		font-style: italic;
+	}
+	
+	.log-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.log-list li {
+		padding: 1rem;
+		margin-bottom: 0.5rem;
+		border: 1px solid rgba(217, 119, 6, 0.2);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.05);
+		color: #4a5568;
+		transition: background 0.2s ease;
+	}
+	
+	.log-list li:hover {
+		background: rgba(217, 119, 6, 0.1);
+	}
+</style>

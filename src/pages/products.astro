@@ -1,0 +1,131 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Products - ${SITE_TITLE}`} description="Products and projects built by Vishnu KS" />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h2 class="title is-4">
+			Active Products
+			</h2>
+			<div class="projects-grid">
+				<div class="project-tile">
+					<h3><a href="https://diff.blog">diff.blog</a></h3>
+					<div class="year">2019</div>
+					<p>A platform to discover and follow amazing developer blogs.</p>
+				</div>
+			</div>
+			
+			<h2 class="title is-4">
+			Archived Products
+			</h2>
+			<div class="projects-grid archived">
+				<div class="project-tile">
+					<h3><a href="https://github.com/hackerkid/peerdium">Peerdium</a></h3>
+					<div class="year">2018</div>
+					<p>Decentralized P2P publishing platform built using browser cache and torrents.</p>
+					<div class="project-badges">
+						<span class="badge">Featured on <a href="https://news.ycombinator.com/item?id=17060272">HackerNews front page</a></span>
+						<span class="badge"><a href="https://www.producthunt.com/posts/peerdium">#4</a> on ProductHunt</span>
+					</div>
+				</div>
+				<div class="project-tile">
+					<h3><a href="https://hackinthenorth.com">Hack In The North</a></h3>
+					<div class="year">2016</div>
+					<p>One of the largest student hackathons in India that I founded and organized.</p>
+				</div>
+				<div class="project-tile">
+					<h3><a href="https://github.com/hackerkid/wikifeedia">Wikifeedia</a></h3>
+					<div class="year">2015</div>
+					<p>Newsfeed for Wikipedia that makes it easy to find and read interesting articles.</p>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+	
+	.project-tile {
+		padding: 1.5rem;
+		border: 1px solid rgba(217, 119, 6, 0.3);
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(5px);
+		transition: all 0.3s ease;
+	}
+	
+	.project-tile:hover {
+		border-color: #d97706;
+		background: rgba(217, 119, 6, 0.1);
+		transform: translateY(-4px);
+		box-shadow: 0 8px 25px rgba(217, 119, 6, 0.2);
+	}
+	
+	.project-tile h3 {
+		margin: 0 0 1rem 0;
+		font-size: 1.25rem;
+	}
+	
+	.project-tile h3 a {
+		color: #d97706;
+		font-weight: bold;
+	}
+	
+	.project-tile p {
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+		color: #4a5568;
+	}
+	
+	.project-badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.badge {
+		font-size: 0.75rem;
+		padding: 0.25rem 0.5rem;
+		background: rgba(217, 119, 6, 0.2);
+		border-radius: 4px;
+		color: #d97706;
+		font-weight: 500;
+	}
+	
+	.badge a {
+		color: inherit;
+	}
+	
+	.year {
+		font-size: 0.85rem;
+		color: #6b7280;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+	
+	.archived .project-tile {
+		opacity: 0.8;
+	}
+	
+	.archived .project-tile:hover {
+		opacity: 1;
+	}
+</style>

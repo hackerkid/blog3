@@ -1,0 +1,94 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="About Vishnu KS - Open source contributions, university background, and talks" />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<div class="bio-section">
+				<p>I'm a software engineer passionate about building products that help people live life meaningfully.</p>
+			</div>
+			
+			<h2 class="title is-4">
+				Work
+			</h2>
+			
+			<h3>Yelp (2021 - present)</h3>
+			<p>
+				I am currently working as a software engineer at <a href="https://www.yelp.com">Yelp</a> in London.
+			</p>
+			
+			<h3>Kandra Labs / Zulip (2017 - 2021)</h3>
+			<p>
+				I was a software engineer at Kandra Labs (creators of <a href="https://zulipchat.com">Zulip</a> open source project). All the code I wrote
+				while at Kandra Labs was open source and can be accessed <a href="https://github.com/zulip/zulip/commits?author=hackerkid">here</a>.
+			</p>
+			
+			<h2 class="title is-4">
+				Open source and community
+			</h2>
+			<ul>
+				<li><a href="https://summerofcode.withgoogle.com/archive/">Google Summer of Code</a> 2017 with Zulip.</li>
+				<li>Mentor for Zulip in <a href="https://summerofcode.withgoogle.com/archive/">Google Summer of Code</a> 2018, 2019 and 2020.</li>
+				<li>Organization administrator for Zulip in <a href="https://codein.withgoogle.com/archive/">Google CodeIn</a> 2017.</li>
+				<li>Mentor for Zulip in <a href="https://www.outreachy.org/">Outreachy</a> 2017.</li>
+			</ul>
+			
+			<h2 class="title is-4">
+				University
+			</h2>
+			<ul>
+				<li>Bachelors in Information Technology (2013 - 2017) from <a href="https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Allahabad">
+					Indian Institute of Information Technology, Allahabad</a>.</li>
+				<li>I was the overall coordinator of <a href="https://geekhaven.iiita.ac.in/">Geekhaven</a>, the organization
+				responsible for running the technical activities in University. During this time (2015 - 2016) I managed the working of 7 sub divisions of
+				the organization with over 14 coordintors and 40 members.
+			</li>
+			<li>
+				I was in charge of events during the 2nd <a href="https://aparoksha.org/">Technical Fest</a> of University. I created,
+				scheduled and coordinated over 25 events during the fest.
+			</li>
+			</ul>
+			
+			<h2 class="title is-4">
+				Talks
+			</h2>
+			<ul>	
+				<li>Building a profitable business around your open source project. (<a href="https://www21.in.tum.de/teaching/osp/WS20/index.html#vishnu-k.s.-how-to-build-a-profitable-business-around-your-open-source-project">TU Munich Open source course 2021</a> - <a href="https://github.com/hackerkid/talks/blob/master/pdf/building-a-profitable-business-around-your-open-source-project.pdf">Slides</a>)</li> 
+				<li>What I learned from contributing to open source. (<a href="https://github.com/GeekHaven/quick_talks">GeekHaven GitHub QuickTalks 2017</a> - <a href="https://speakerdeck.com/hackerkid/what-i-learned-from-contributing-to-open-source">Slides</a>)</li>
+				<li>The art of open source. (GDG Allahabad 2016 - <a href="https://speakerdeck.com/hackerkid/the-art-of-open-source">Slides</a>)</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.bio-section {
+		margin-bottom: 3rem;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 8px;
+		border: 1px solid rgba(217, 119, 6, 0.2);
+	}
+	
+	.bio-section p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: #4a5568;
+		margin: 0;
+	}
+	
+	h3 {
+		color: #6b7280;
+		font-weight: 500;
+	}
+</style>
