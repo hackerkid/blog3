@@ -19,19 +19,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 						while at Kandra Labs was open source and can be accessed <a href="https://github.com/zulip/zulip/commits?author=hackerkid">here</a>.
 					</p>
 					<h2 class="title is-4">
-					Projects
+					Products
 					</h2>
-					<ul>
-						<li>
-							<a href="https://diff.blog">diff.blog</a> - A platform to discover and follow amazing developer blogs.
-						</li>
-						<li>
-							<a href="https://github.com/hackerkid/peerdium">Peerdium</a> - Decentralized P2P publishing platform built using browser cache and torrents.
-							Featured on <a href="https://news.ycombinator.com/item?id=17060272">front page</a> of HackerNews.
-							<a href="https://www.producthunt.com/posts/peerdium">#4</a> product of the day on ProductHunt.
-						</li>
-						<li><a href="https://github.com/hackerkid/wikifeedia">Wikifeedia</a> - Newsfeed for Wikipedia that makes it easy to find and read interesting articles.</li>
-					</ul>
+					<div class="projects-grid">
+						<div class="project-tile">
+							<h3><a href="https://diff.blog">diff.blog</a></h3>
+							<div class="year">2019</div>
+							<p>A platform to discover and follow amazing developer blogs.</p>
+						</div>
+						<div class="project-tile">
+							<h3><a href="https://github.com/hackerkid/peerdium">Peerdium</a></h3>
+							<div class="year">2018</div>
+							<p>Decentralized P2P publishing platform built using browser cache and torrents.</p>
+							<div class="project-badges">
+								<span class="badge">Featured on <a href="https://news.ycombinator.com/item?id=17060272">HackerNews front page</a></span>
+								<span class="badge"><a href="https://www.producthunt.com/posts/peerdium">#4</a> on ProductHunt</span>
+							</div>
+						</div>
+						<div class="project-tile">
+							<h3><a href="https://hackinthenorth.com">Hack In The North</a></h3>
+							<div class="year">2016</div>
+							<p>One of the largest student hackathons in India that I founded and organized.</p>
+						</div>
+						<div class="project-tile">
+							<h3><a href="https://github.com/hackerkid/wikifeedia">Wikifeedia</a></h3>
+							<div class="year">2015</div>
+							<p>Newsfeed for Wikipedia that makes it easy to find and read interesting articles.</p>
+						</div>
+					</div>
 					<h2 class="title is-4">
 						Open source and community
 						</h2>
@@ -47,7 +62,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					<ul>
 						<li>Bachelors in Information Technology (2013 - 2017) from <a href="https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Allahabad">
 							Indian Institute of Information Technology, Allahabad</a>.</li>
-							<li>I started <a href="https://hackinthenorth.com">Hack In The North</a>, one of the largest student hackathons in India.</li>
 							<li>I was the overall coordinator of <a href="https://geekhaven.iiita.ac.in/">Geekhaven</a>, the organization
 							responsible for running the technical activities in University. During this time (2015 - 2016) I managed the working of 7 sub divisions of
 							the organization with over 14 coordintors and 40 members.
@@ -71,3 +85,72 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+	
+	.project-tile {
+		padding: 1.5rem;
+		border: 1px solid rgba(217, 119, 6, 0.3);
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(5px);
+		transition: all 0.3s ease;
+	}
+	
+	.project-tile:hover {
+		border-color: #d97706;
+		background: rgba(217, 119, 6, 0.1);
+		transform: translateY(-4px);
+		box-shadow: 0 8px 25px rgba(217, 119, 6, 0.2);
+	}
+	
+	.project-tile h3 {
+		margin: 0 0 1rem 0;
+		font-size: 1.25rem;
+	}
+	
+	.project-tile h3 a {
+		color: #d97706;
+		font-weight: bold;
+	}
+	
+	.project-tile p {
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+		color: #4a5568;
+	}
+	
+	.project-badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.badge {
+		font-size: 0.75rem;
+		padding: 0.25rem 0.5rem;
+		background: rgba(217, 119, 6, 0.2);
+		border-radius: 4px;
+		color: #d97706;
+		font-weight: 500;
+	}
+	
+	.badge a {
+		color: inherit;
+	}
+	
+	.year {
+		font-size: 0.85rem;
+		color: #6b7280;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+</style>
