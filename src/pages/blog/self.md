@@ -31,7 +31,7 @@ For myself, I am convinced most of the time I have a self even though I can't po
 
 Sometimes I think of the self as the sensations in the head.
 
-But I know that's not fully correct since there is vision, sounds, feelings and other sensations my self experience and they arise in various other regions in consciousness.
+But I know that's not fully correct since there is vision, sounds, feelings and other sensations my self experience and they arise in various other regions in [consciousness](https://en.wikipedia.org/wiki/Consciousness).
 
 Sometimes I wonder if self is a story that is made up by the physical body for survival.
 
