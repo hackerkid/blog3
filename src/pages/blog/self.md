@@ -1,7 +1,9 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "The mysterious puzzle of one's Self"
+description: "Exploring the greatest puzzle of all time - understanding what the self really is"
 pubDate: "October 12, 2025"
+heroImage: "/yosemite.jpg"
 ---
 The self is the greatest puzzle of all time.
 
@@ -20,8 +22,6 @@ Some say the self is the soul or consciousness or awareness.
 Some say it's so obvious they don't have to tell you.
 
 Some are astonished that I would even ask a question.
-
-Some think why am I asking such obvious questions.
 
 You might have noticed how the answers seem to be all different.
 
