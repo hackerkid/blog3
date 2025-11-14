@@ -4,171 +4,56 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-
-// Read logs from the project root
-const logsText = readFileSync(resolve('./src/data/logs.md'), 'utf-8');
-const logLines = logsText.split('\n').filter(line => line.startsWith('- ')).map(line => line.substring(2));
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			ul {
+				list-style-type: none;
+				padding: unset;
+			}
+			ul li {
+				display: flex;
+			}
+			ul li time {
+				flex: 0 0 130px;
+				font-style: italic;
+				color: #595959;
+			}
+			ul li a:visited {
+				color: #8e32dc;
+			}
+		</style>
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
+		<Header />
 		<main>
-			<section class="now-section">
-				<h2>🚧 Building now</h2>
-				<p>My current focus.</p>
-				<div class="now-content">
-					<strong>Building FocusBar</strong> — Mac menu bar app for helping users get better at focus and productivity.
-					<br>
-					<br>
-					Goal: Launch MVP by July 2025.
-				</div>
-			</section>
-			
-			<section class="log-section">
-				<h2>📅 Log</h2>
-				<p>A lightweight public changelog of my progress.</p>
-				<ul class="log-list">
-					{logLines.map(log => <li>{log}</li>)}
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<time datetime={post.frontmatter.pubDate}>
+									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+										year: 'numeric',
+										month: 'short',
+										day: 'numeric',
+									})}
+								</time>
+								<a href={post.url}>{post.frontmatter.title}</a>
+							</li>
+						))
+					}
 				</ul>
-				<p class="see-more"><a href="/logs">See more →</a></p>
-			</section>
-			
-			<section class="ideas-section">
-				<h2>🧠 Ideas</h2>
-				<p>Project ideas and experiments I am exploring.</p>
-				<ul class="ideas-list">
-					<li>A DNS-based tool to block distracting websites and apps.</li>
-				</ul>
-			</section>
-			<section class="products-section">
-				<h2><a href="/products">🚀 Products →</a></h2>
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
-
-<style>
-	.projects-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 1.5rem;
-		margin: 2rem 0;
-	}
-	
-	.project-tile {
-		padding: 1.5rem;
-		border: 1px solid rgba(217, 119, 6, 0.3);
-		border-radius: 12px;
-		background: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(5px);
-		transition: all 0.3s ease;
-	}
-	
-	.project-tile:hover {
-		border-color: #d97706;
-		background: rgba(217, 119, 6, 0.1);
-		transform: translateY(-4px);
-		box-shadow: 0 8px 25px rgba(217, 119, 6, 0.2);
-	}
-	
-	.project-tile h3 {
-		margin: 0 0 1rem 0;
-		font-size: 1.25rem;
-	}
-	
-	.project-tile h3 a {
-		color: #d97706;
-		font-weight: bold;
-	}
-	
-	.project-tile p {
-		margin: 0 0 1rem 0;
-		line-height: 1.6;
-		color: #4a5568;
-	}
-	
-	.project-badges {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-	
-	.badge {
-		font-size: 0.75rem;
-		padding: 0.25rem 0.5rem;
-		background: rgba(217, 119, 6, 0.2);
-		border-radius: 4px;
-		color: #d97706;
-		font-weight: 500;
-	}
-	
-	.badge a {
-		color: inherit;
-	}
-	
-	
-	section {
-		margin: 3rem 0;
-		padding: 1.5rem;
-		border: 1px solid rgba(217, 119, 6, 0.2);
-		border-radius: 8px;
-		background: rgba(255, 255, 255, 0.05);
-	}
-	
-	section h2 {
-		color: #d97706;
-		margin-bottom: 0.5rem;
-		font-size: 1.5rem;
-	}
-	
-	section p {
-		color: #6b7280;
-		font-size: 0.9rem;
-		margin-bottom: 1rem;
-		font-style: italic;
-	}
-	
-	.now-content {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		color: #4a5568;
-	}
-	
-	.log-list, .ideas-list {
-		list-style: none;
-		padding: 0;
-	}
-	
-	.log-list li, .ideas-list li {
-		padding: 0.5rem 0;
-		border-bottom: 1px solid rgba(217, 119, 6, 0.1);
-		color: #4a5568;
-	}
-	
-	.log-list li:last-child, .ideas-list li:last-child {
-		border-bottom: none;
-	}
-	
-	.products-section a {
-		font-weight: bold;
-	}
-	
-	.see-more {
-		margin-top: 1rem;
-		text-align: right;
-	}
-	
-	.see-more a {
-		color: #d97706;
-		font-weight: 500;
-		font-size: 0.9rem;
-	}
-</style>
