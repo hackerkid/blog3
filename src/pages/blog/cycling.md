@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Cycling to Isle of Grain"
 pubDate: "Jul 5 2023"
+heroImage: "/paris.jpg"
 ---
 
 A couple of days back I and my friend Bhargav decided to go for a long cycling ride.
