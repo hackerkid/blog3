@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Humbled by Watchingh the 2026 London Marathon"
+title: "Humbled by Watchingh the London Marathon"
 pubDate: "April 28 2026"
 ---
 
