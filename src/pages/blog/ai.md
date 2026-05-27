@@ -22,21 +22,17 @@ The best one can do is notice the images, sounds, feelings etc arising here and 
 
 But that is an assumption. An assumption nevertheless appearing in consciousness.
 
-One of the many contents of consciousness.
+One of the many contents of consciousness. The very belief that your body generates consciousness is just another thought arising within it — you cannot step outside it to verify.
 
 You see the problem?
 
 Similarly once physical robots enter the world that look just like humans, things get more complicated.
 
-They would look just like humans that you cannot even tell apart whether they are robots or humans.
-
 And then one doesn't have much choice but assume everyone you interact with is conscious. Because you don't want to harm another human you see.
 
-Honestly, I don't think it would be upto the individual anyway.
+Honestly, I don't think it would be up to the individual anyway.
 
-The culture would start to behave in that way.
-
-Treating all human like beings as conscious.
+Culture would start treating all human like beings as conscious.
 
 This is where it gets even more trippy.
 
