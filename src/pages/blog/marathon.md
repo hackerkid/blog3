@@ -1,10 +1,10 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Humbled by Watchingh the London Marathon"
+title: "Watching the 2026 London Marathon"
 pubDate: "April 28 2026"
 ---
 
-I want to write this because watching the London marathon was a humbling experience for me.
+I watched the London Marathon today.
 
 The fastest of the two runners in the marathon ran it in under 2 hours.
 
