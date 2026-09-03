@@ -1,49 +1,41 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "AI will break our assumptions about consciousness"
-pubDate: "27 May 2026"
+title: "When Robots start to look like Humans"
+pubDate: "Sept 3 2026"
 ---
 
-We are going to accept AI is conscious.
+Turing came up with the Turing test in 1950.
 
-This is inevitable.
+The test is simple.
 
-We already accept that all humans are conscious.
+A human talks with a computer program.
 
-Even though no human on this planet has access to the consciousness stream of another human.
+If the computer program can make the human believe that they are talking with a human, the program/AI passed the Turing test.
 
-But we assume that the human that we talk with is also having an experience and they can see and hear the world.
+We can say the recent LLM models like GPT 5 and Opus speak really similar to humans.
 
-Of course it's an assumption that we think as true.
+And given the progress it's fair to say they resemble humans more and more.
 
-The problem is nobody can verify this.
+Now, what about physical robots?
 
-The best one can do is notice the images, sounds, feelings etc arising here and make an assertion that this belongs to the body.
+Physical robots are getting better and better.
 
-But that is an assumption. An assumption nevertheless appearing in consciousness.
+Tesla is working on developing the Optimus humanoid robots.
 
-One of the many contents of consciousness. The very belief that your body generates consciousness is just another thought arising within it — you cannot step outside it to verify.
+China recently hosted an athletic competition for robots which gained international attention.
 
-You see the problem?
+Given all this, it seems like we are on a path where technology wise we can develop robots that look like and act like humans.
 
-Similarly once physical robots enter the world that look just like humans, things get more complicated.
+Would there be robots that look like humans walking down the streets in near future?
 
-And then one doesn't have much choice but assume everyone you interact with is conscious. Because you don't want to harm another human you see.
+Would it become hard for us to tell whether we are interacting with a human or robot?
 
-Honestly, I don't think it would be up to the individual anyway.
+Would we start assuming every human like creature is conscious even though it might be a robot?
 
-Culture would start treating all human like beings as conscious.
+Or even worse, might people interact with other humans and think they are not conscious?
 
-This is where it gets even more trippy.
+How do we solve for this?
 
-What if this is already the case?
+Will we have laws that prevent making robots that look like a human?
 
-What if it's culture that makes you think humans are conscious?
-
-You see. You don't even have a way to verify this body that arises in this consciousness is what generates the consciousness in the first place.
-
-You assume that's true. But you learned that from culture.
-
-What if humans being conscious is a construct of culture.
-
-And what if there was just consciousness and humans inside consciousness thinking humans have consciousness. A trick of culture.
+Or will it not even matter whether they look like humans as long as they act like one?
