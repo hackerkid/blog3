@@ -3,10 +3,18 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { getSubstackPosts } from '../substack';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// Combine local posts with Substack posts (which link out to Substack), sorted by date.
+const localPosts = (await Astro.glob('./blog/*.{md,mdx}')).map((post) => ({
+	title: post.frontmatter.title,
+	url: post.url,
+	pubDate: post.frontmatter.pubDate,
+	external: false,
+}));
+const substackPosts = (await getSubstackPosts()).map((post) => ({ ...post, external: true }));
+const posts = [...localPosts, ...substackPosts].sort(
+	(a, b) => new Date(b.pubDate).valueOf() - new Date(a.pubDate).valueOf()
 );
 ---
 
@@ -22,6 +30,27 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			ul li {
 				display: flex;
 			}
+			ul li[hidden] {
+				display: none;
+			}
+			.filters {
+				display: flex;
+				gap: 1rem;
+				margin-bottom: 1rem;
+			}
+			.filters button {
+				padding: 0;
+				border: none;
+				background: none;
+				font-family: inherit;
+				font-size: 0.9em;
+				color: #a0a0a0;
+				cursor: pointer;
+			}
+			.filters button:hover,
+			.filters button[aria-pressed='true'] {
+				color: #d97706;
+			}
 			ul li time {
 				flex: 0 0 130px;
 				font-style: italic;
@@ -30,24 +59,41 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			ul li a:visited {
 				color: #8e32dc;
 			}
+			.external {
+				margin-left: 0.5em;
+				font-size: 0.75em;
+				color: #a0a0a0;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<section>
+				<div class="filters">
+					<button type="button" data-filter="all" aria-pressed="true">All</button>
+					<button type="button" data-filter="blog" aria-pressed="false">Blog</button>
+					<button type="button" data-filter="substack" aria-pressed="false">Substack</button>
+				</div>
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+							<li data-source={post.external ? 'substack' : 'blog'}>
+								<time datetime={post.pubDate}>
+									{new Date(post.pubDate).toLocaleDateString('en-us', {
 										year: 'numeric',
 										month: 'short',
 										day: 'numeric',
 									})}
 								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
+								{post.external ? (
+									<a href={post.url} target="_blank" rel="noopener">
+										{post.title}
+										<span class="external">Substack</span>
+									</a>
+								) : (
+									<a href={post.url}>{post.title}</a>
+								)}
 							</li>
 						))
 					}
@@ -55,5 +101,19 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			</section>
 		</main>
 		<Footer />
+		<script>
+			const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
+			const items = document.querySelectorAll<HTMLLIElement>('li[data-source]');
+
+			buttons.forEach((button) => {
+				button.addEventListener('click', () => {
+					const filter = button.dataset.filter;
+					buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+					items.forEach((item) => {
+						item.hidden = filter !== 'all' && item.dataset.source !== filter;
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

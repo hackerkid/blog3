@@ -3,10 +3,18 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { getSubstackPosts } from '../substack';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// Combine local posts with Substack posts (which link out to Substack), sorted by date.
+const localPosts = (await Astro.glob('./blog/*.{md,mdx}')).map((post) => ({
+	title: post.frontmatter.title,
+	url: post.url,
+	pubDate: post.frontmatter.pubDate,
+	external: false,
+}));
+const substackPosts = (await getSubstackPosts()).map((post) => ({ ...post, external: true }));
+const posts = [...localPosts, ...substackPosts].sort(
+	(a, b) => new Date(b.pubDate).valueOf() - new Date(a.pubDate).valueOf()
 );
 ---
 
@@ -30,6 +38,11 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			ul li a:visited {
 				color: #8e32dc;
 			}
+			.external {
+				margin-left: 0.5em;
+				font-size: 0.75em;
+				color: #a0a0a0;
+			}
 		</style>
 	</head>
 	<body>
@@ -40,14 +53,21 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+								<time datetime={post.pubDate}>
+									{new Date(post.pubDate).toLocaleDateString('en-us', {
 										year: 'numeric',
 										month: 'short',
 										day: 'numeric',
 									})}
 								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
+								{post.external ? (
+									<a href={post.url} target="_blank" rel="noopener">
+										{post.title}
+										<span class="external">Substack</span>
+									</a>
+								) : (
+									<a href={post.url}>{post.title}</a>
+								)}
 							</li>
 						))
 					}
