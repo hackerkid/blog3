@@ -1,0 +1,23 @@
+# The site pulls Substack posts at build time, so push a commit daily to
+# trigger a Cloudflare Pages rebuild and pick up new posts.
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push empty commit to trigger deploy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "Daily rebuild to pick up Substack posts."
+          git push
