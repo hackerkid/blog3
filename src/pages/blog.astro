@@ -39,8 +39,7 @@ const posts = [...localPosts, ...substackPosts].sort(
 				color: #8e32dc;
 			}
 			.external {
-				margin-left: 0.5em;
-				font-size: 0.75em;
+				font-size: 0.8em;
 				color: #a0a0a0;
 			}
 		</style>
@@ -62,8 +61,7 @@ const posts = [...localPosts, ...substackPosts].sort(
 								</time>
 								{post.external ? (
 									<a href={post.url} target="_blank" rel="noopener">
-										{post.title}
-										<span class="external">Substack</span>
+										{post.title}{'\u00a0'}<span class="external" title="On Substack" aria-label="(on Substack)">↗</span>
 									</a>
 								) : (
 									<a href={post.url}>{post.title}</a>
