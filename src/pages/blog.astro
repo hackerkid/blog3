@@ -3,17 +3,18 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import { getSubstackPosts } from '../substack';
+import { getExternalPosts } from '../feeds';
 
-// Combine local posts with Substack posts (which link out to Substack), sorted by date.
+// Combine local posts with posts from external feeds (which link out), sorted by date.
 const localPosts = (await Astro.glob('./blog/*.{md,mdx}')).map((post) => ({
 	title: post.frontmatter.title,
 	url: post.url,
 	pubDate: post.frontmatter.pubDate,
+	source: 'blog',
 	external: false,
 }));
-const substackPosts = (await getSubstackPosts()).map((post) => ({ ...post, external: true }));
-const posts = [...localPosts, ...substackPosts].sort(
+const externalPosts = (await getExternalPosts()).map((post) => ({ ...post, external: true }));
+const posts = [...localPosts, ...externalPosts].sort(
 	(a, b) => new Date(b.pubDate).valueOf() - new Date(a.pubDate).valueOf()
 );
 ---
@@ -61,7 +62,7 @@ const posts = [...localPosts, ...substackPosts].sort(
 								</time>
 								{post.external ? (
 									<a href={post.url} target="_blank" rel="noopener">
-										{post.title}{'\u00a0'}<span class="external" title="On Substack" aria-label="(on Substack)">↗</span>
+										{post.title}{'\u00a0'}<span class="external" title={`On ${post.label}`} aria-label={`(on ${post.label})`}>↗</span>
 									</a>
 								) : (
 									<a href={post.url}>{post.title}</a>
